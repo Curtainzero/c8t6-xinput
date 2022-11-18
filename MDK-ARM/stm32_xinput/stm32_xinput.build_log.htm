@@ -1,0 +1,187 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: ¦ÌVision V5.37.0.0
+Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: y y, y, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.37.0.0
+Toolchain Path:  D:\keil5arm\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.18
+Assembler:       Armasm.exe V6.18
+Linker/Locator:  ArmLink.exe V6.18
+Library Manager: ArmAr.exe V6.18
+Hex Converter:   FromElf.exe V6.18
+CPU DLL:         SARMCM3.DLL V5.37.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.9.0
+Dialog DLL:      TCM.DLL V1.56.1.0
+ 
+<h2>Project:</h2>
+C:\Users\14792\Desktop\STM32-X360-xinput\MDK-ARM\stm32_xinput.uvprojx
+Project File Date:  11/06/2022
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.18', folder: 'D:\keil5arm\ARM\ARMCLANG\Bin'
+Rebuild target 'stm32_xinput'
+assembling startup_stm32f103xb.s...
+compiling usbd_conf.c...
+../Src/stm32_xinput/xinput.c(332): warning: GCC does not allow variable declarations in for loop initializers before C99 [-Wgcc-compat]
+        for (int i=2; i<13; i++) {TXData[i] = 0x00;}
+             ^
+../Src/stm32_xinput/xinput.c(375): warning: non-void function does not return a value [-Wreturn-type]
+}
+^
+2 warnings generated.
+compiling xinput.c...
+compiling usb_xinput.c...
+../Src/usbd_custom_hid_if.c(172): warning: GCC does not allow variable declarations in for loop initializers before C99 [-Wgcc-compat]
+        for( uint8_t i = 0 ; i < 8 ; i++ ){
+             ^
+1 warning generated.
+compiling usbd_custom_hid_if.c...
+compiling stm32f1xx_it.c...
+compiling stm32f1xx_hal_msp.c...
+compiling usb_device.c...
+../Src/usbd_desc.c(213): warning: passing 'char[11]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+    USBD_GetString (USBD_PRODUCT_STRING_FS, USBD_StrDesc, length);
+                    ^~~~~~~~~~~~~~~~~~~~~~
+../Src/usbd_desc.c(68): note: expanded from macro 'USBD_PRODUCT_STRING_FS'
+#define USBD_PRODUCT_STRING_FS     "Controller"
+                                   ^~~~~~~~~~~~
+../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h(93): note: passing argument to parameter 'desc' here
+void USBD_GetString         (uint8_t *desc, uint8_t *unicode, uint16_t *len);
+                                      ^
+../Src/usbd_desc.c(217): warning: passing 'char[11]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+    USBD_GetString (USBD_PRODUCT_STRING_FS, USBD_StrDesc, length);    
+                    ^~~~~~~~~~~~~~~~~~~~~~
+../Src/usbd_desc.c(68): note: expanded from macro 'USBD_PRODUCT_STRING_FS'
+#define USBD_PRODUCT_STRING_FS     "Controller"
+                                   ^~~~~~~~~~~~
+../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h(93): note: passing argument to parameter 'desc' here
+void USBD_GetString         (uint8_t *desc, uint8_t *unicode, uint16_t *len);
+                                      ^
+../Src/usbd_desc.c(231): warning: passing 'char[11]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+  USBD_GetString (USBD_MANUFACTURER_STRING, USBD_StrDesc, length);
+                  ^~~~~~~~~~~~~~~~~~~~~~~~
+../Src/usbd_desc.c(66): note: expanded from macro 'USBD_MANUFACTURER_STRING'
+#define USBD_MANUFACTURER_STRING     "@Microsoft"
+                                     ^~~~~~~~~~~~
+../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h(93): note: passing argument to parameter 'desc' here
+void USBD_GetString         (uint8_t *desc, uint8_t *unicode, uint16_t *len);
+                                      ^
+../Src/usbd_desc.c(246): warning: passing 'char[13]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+    USBD_GetString (USBD_SERIALNUMBER_STRING_FS, USBD_StrDesc, length);
+                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Src/usbd_desc.c(69): note: expanded from macro 'USBD_SERIALNUMBER_STRING_FS'
+#define USBD_SERIALNUMBER_STRING_FS     "00000000001A"
+                                        ^~~~~~~~~~~~~~
+../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h(93): note: passing argument to parameter 'desc' here
+void USBD_GetString         (uint8_t *desc, uint8_t *unicode, uint16_t *len);
+                                      ^
+../Src/usbd_desc.c(250): warning: passing 'char[13]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+    USBD_GetString (USBD_SERIALNUMBER_STRING_FS, USBD_StrDesc, length);    
+                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Src/usbd_desc.c(69): note: expanded from macro 'USBD_SERIALNUMBER_STRING_FS'
+#define USBD_SERIALNUMBER_STRING_FS     "00000000001A"
+                                        ^~~~~~~~~~~~~~
+../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h(93): note: passing argument to parameter 'desc' here
+void USBD_GetString         (uint8_t *desc, uint8_t *unicode, uint16_t *len);
+                                      ^
+../Src/usbd_desc.c(266): warning: passing 'char[18]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+    USBD_GetString (USBD_CONFIGURATION_STRING_FS, USBD_StrDesc, length);
+                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Src/usbd_desc.c(70): note: expanded from macro 'USBD_CONFIGURATION_STRING_FS'
+#define USBD_CONFIGURATION_STRING_FS     "Custom HID Config"
+                                         ^~~~~~~~~~~~~~~~~~~
+../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h(93): note: passing argument to parameter 'desc' here
+void USBD_GetString         (uint8_t *desc, uint8_t *unicode, uint16_t *len);
+                                      ^
+../Src/usbd_desc.c(270): warning: passing 'char[18]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+    USBD_GetString (USBD_CONFIGURATION_STRING_FS, USBD_StrDesc, length); 
+                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Src/usbd_desc.c(70): note: expanded from macro 'USBD_CONFIGURATION_STRING_FS'
+#define USBD_CONFIGURATION_STRING_FS     "Custom HID Config"
+                                         ^~~~~~~~~~~~~~~~~~~
+../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h(93): note: passing argument to parameter 'desc' here
+void USBD_GetString         (uint8_t *desc, uint8_t *unicode, uint16_t *len);
+                                      ^
+../Src/usbd_desc.c(286): warning: passing 'char[179]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+    USBD_GetString (USBD_INTERFACE_STRING_FS, USBD_StrDesc, length);
+                    ^~~~~~~~~~~~~~~~~~~~~~~~
+../Src/usbd_desc.c(71): note: expanded from macro 'USBD_INTERFACE_STRING_FS'
+#define USBD_INTERFACE_STRING_FS     "\xB2\x03\x58\x00\x62\x00\x6F\x00\x78\x00\x20\x00\x53\x00\x65\x00\x63\x00\x75\x00\x72\x00\x69\x00\x74\x00\x79\x00\x20\x00\x4D\x00\x65\x00\x74\x00\x68\x00\x6F\x00\x64\x00\x20\x00\x33\x00\x2C\x00\x20\x00\x56\x00\x65\x00\x72\x00\x73\x00\x69\x00\x6F\x00\x6E\x00\x20\x00\x31\x00\x2E\x00\x30\x00\x30\x00\x2C\x00\x20\x00\xA9\x00\x20\x00\x32\x00\x30\x00\x30\x00\x35\x00\x20\x00\x4D\x00\x69\x00\x63\x00\x72\x00\x6F\x00\x73\x00\x6F\x00\x66\x00\x74\x00\x20\x00\x43\x00\x6F\x00\x72\x00\x70\x00\x6F\x00\x72\x00\x61\x00\x74\x00\x69\x00\x6F\x00\x6E\x00\x2E\x00\x20\x00\x41\x00\x6C\x00\x6C\x00\x20\x00\x72\x00\x69\x00\x67\x00\x68\x00\x74\x00\x73\x00\x20\x00\x72\x00\x65\x00\x73\x00\x65\x00\x72\x00\x76\x00\x65\x00\x64\x00\x2E\x00"                         // (ALTERAR)
+                                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h(93): note: passing argument to parameter 'desc' here
+void USBD_GetString         (uint8_t *desc, uint8_t *unicode, uint16_t *len);
+                                      ^
+../Src/usbd_desc.c(290): warning: passing 'char[179]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+    USBD_GetString (USBD_INTERFACE_STRING_FS, USBD_StrDesc, length);
+                    ^~~~~~~~~~~~~~~~~~~~~~~~
+../Src/usbd_desc.c(71): note: expanded from macro 'USBD_INTERFACE_STRING_FS'
+#define USBD_INTERFACE_STRING_FS     "\xB2\x03\x58\x00\x62\x00\x6F\x00\x78\x00\x20\x00\x53\x00\x65\x00\x63\x00\x75\x00\x72\x00\x69\x00\x74\x00\x79\x00\x20\x00\x4D\x00\x65\x00\x74\x00\x68\x00\x6F\x00\x64\x00\x20\x00\x33\x00\x2C\x00\x20\x00\x56\x00\x65\x00\x72\x00\x73\x00\x69\x00\x6F\x00\x6E\x00\x20\x00\x31\x00\x2E\x00\x30\x00\x30\x00\x2C\x00\x20\x00\xA9\x00\x20\x00\x32\x00\x30\x00\x30\x00\x35\x00\x20\x00\x4D\x00\x69\x00\x63\x00\x72\x00\x6F\x00\x73\x00\x6F\x00\x66\x00\x74\x00\x20\x00\x43\x00\x6F\x00\x72\x00\x70\x00\x6F\x00\x72\x00\x61\x00\x74\x00\x69\x00\x6F\x00\x6E\x00\x2E\x00\x20\x00\x41\x00\x6C\x00\x6C\x00\x20\x00\x72\x00\x69\x00\x67\x00\x68\x00\x74\x00\x73\x00\x20\x00\x72\x00\x65\x00\x73\x00\x65\x00\x72\x00\x76\x00\x65\x00\x64\x00\x2E\x00"                         // (ALTERAR)
+                                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h(93): note: passing argument to parameter 'desc' here
+void USBD_GetString         (uint8_t *desc, uint8_t *unicode, uint16_t *len);
+                                      ^
+9 warnings generated.
+compiling usbd_desc.c...
+compiling main.c...
+compiling stm32_xinput.c...
+compiling stm32f1xx_hal_tim_ex.c...
+compiling stm32f1xx_hal_pcd_ex.c...
+compiling stm32f1xx_hal_gpio.c...
+compiling stm32f1xx_hal_rcc_ex.c...
+compiling stm32f1xx_hal_adc_ex.c...
+compiling stm32f1xx_ll_usb.c...
+compiling stm32f1xx_hal_rcc.c...
+compiling stm32f1xx_hal_pcd.c...
+compiling stm32f1xx_hal_tim.c...
+compiling system_stm32f1xx.c...
+compiling stm32f1xx_hal.c...
+compiling stm32f1xx_hal_cortex.c...
+compiling stm32f1xx_hal_pwr.c...
+compiling stm32f1xx_hal_flash.c...
+../Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Src/usbd_customhid.c(551): warning: GCC does not allow variable declarations in for loop initializers before C99 [-Wgcc-compat]
+        for( uint8_t i = 0 ; i < 8 ; i++ ){
+             ^
+1 warning generated.
+compiling usbd_customhid.c...
+compiling stm32f1xx_hal_flash_ex.c...
+compiling stm32f1xx_hal_dma.c...
+compiling usbd_core.c...
+compiling usbd_ioreq.c...
+compiling stm32f1xx_hal_adc.c...
+compiling usbd_ctlreq.c...
+linking...
+Program Size: Code=17084 RO-data=484 RW-data=336 ZI-data=4560  
+"stm32_xinput\stm32_xinput.axf" - 0 Error(s), 13 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
+                ARM.CMSIS.5.9.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.6.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F1xx_DFP.2.4.0.pack
+                Keil.STM32F1xx_DFP.2.4.0
+                STMicroelectronics STM32F1 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/_stm32_xinput
+  D:/keil5packs/arm/ARM/CMSIS/5.9.0/CMSIS/Core/Include
+  D:/keil5packs/arm/Keil/STM32F1xx_DFP/2.4.0/Device/Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.6.0
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>
